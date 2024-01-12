@@ -97,20 +97,20 @@ nav ul.menu {
 body {
 	background-color: #fff;
 	height: 100%;
-	max-width:1366px;
+
 }
 
-article {
+main {
 	color: #fff;
 	text-align: center;
 	position: relative;
 }
 
-article p {
+main p {
 	margin: auto;
 }
 
-article .gray-bg p { color: #fff;}
+main .gray-bg p { color: #fff;}
 
 div.intro {
 	text-align: center;
@@ -183,11 +183,18 @@ footer {
 div.gray-bg {
 	background-color: #201D27;
 }
+.bfh_wrapper {
+	color: #000;
+	flex-direction:row;
+	max-width:1000px;
+	margin:auto;
+}
 
 .bfh_wrapper ,.intro_wrapper, .register_wrapper
 {
 	display:flex;
 	flex-direction:column;
+	gap: 50px;
 }
 
 .static-bg-image {
@@ -802,12 +809,6 @@ h2.bfh i {
 	display: none;
 }
 
-.bfh_wrapper {
-	color: #000;
-	flex-direction:row;
-	max-width:1000px;
-	margin:auto;
-}
 
 .big-fair-human {
 margin-top: 53px;}
@@ -1091,11 +1092,6 @@ section {
 		max-width: 520px;
 	}
 
-	.bfh_wrapper {
-
-		padding: 0 85px;
-		flex-direction: column;
-	}
 .greentintline{
 	display:block;
 }
@@ -1108,6 +1104,16 @@ section {
 		background-position-x: center;
 	}
 
+	.bfh_wrapper {
+
+padding: 0 85px;
+
+flex-direction: row;
+
+/* gap:50px; */
+
+justify-content: space-between;
+}
 	.intro-aligner {
 		max-width: 500px;
 	}
@@ -1268,8 +1274,8 @@ section {
 	}
 
 	.bfh_description {
-		display: inline-block;
-		width: 33%;
+		/* display: inline-block; */
+		/* width: 33%; */
 		vertical-align: top;
 	}
 	.bfh_description p{
@@ -1413,3 +1419,33 @@ p.why {
 }
 .register-here__wrapper{margin-top:70px;}
 .event-details li.narrow{max-width: 240px;}
+
+.slider {
+  display: flex;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
+
+.slider li {
+  flex: 0 0 auto;
+  width: 340px; /* Set the width of each slide */
+  list-style: none;
+}
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
